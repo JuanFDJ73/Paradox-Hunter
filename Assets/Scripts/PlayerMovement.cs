@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -6,36 +7,35 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 8f;
 
     private Rigidbody2D rb;
-    private float moveInput;
-    private bool isGrounded;
+    private Vector2 moveInput;
+    private bool jumpPressed;
 
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;
-
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    public void OnMove(InputValue value)
     {
-        // Movimiento horizontal
-        moveInput = Input.GetAxisRaw("Horizontal");
+        moveInput = value.Get<Vector2>();
+    }
 
-        // Saltar
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+    public void OnJump(InputValue value)
+    {
+        if (value.isPressed)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpPressed = true;
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        // Aplicar movimiento usando la física
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput.x * speed, rb.velocity.y);
 
-        // Detectar suelo
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        if (jumpPressed)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpPressed = false;
+        }
     }
 }
