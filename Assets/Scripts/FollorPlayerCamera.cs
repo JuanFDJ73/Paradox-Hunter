@@ -18,7 +18,7 @@ public class FollowPlayerCamera : MonoBehaviour
 
     private void FollowPlayer()
     {
-        PlayerMovement player = FindFirstObjectByType<PlayerMovement>();
+        PlayerController player = FindFirstObjectByType<PlayerController>();
 
         if (player == null)
         {

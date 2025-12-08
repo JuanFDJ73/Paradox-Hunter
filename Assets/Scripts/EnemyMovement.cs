@@ -2,68 +2,112 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    #region === VARIABLES PÚBLICAS (Inspector) ===
+    
     [Header("Referencias")]
     [SerializeField] private Rigidbody2D rb2D;
 
-    [Header("Movimiento Horizontal")]
+    [Header("Movimiento")]
     [SerializeField] private float speed = 3f;
     
     [Header("Patrulla")]
-    [SerializeField] private float changeDirectionTime = 2f;  // Tiempo entre cambios de dirección
-    [SerializeField] private float pauseTime = 0.5f;          // Tiempo de pausa al cambiar dirección
+    [SerializeField] private float walkTime = 2f;
+    [SerializeField] private float pauseTime = 0.5f;
     
-    private float directionTimer;
+    #endregion
+
+    #region === VARIABLES PRIVADAS ===
+    
+    private float walkTimer;
     private float pauseTimer;
     private int direction = 1;  // 1 = derecha, -1 = izquierda
-    private bool isPaused = false;
+    private bool isPaused;
+    
+    #endregion
 
+    #region === INICIALIZACIÓN ===
+    
     private void Start()
     {
-        directionTimer = changeDirectionTime;
+        walkTimer = walkTime;
     }
+    
+    #endregion
 
+    #region === UPDATE LOOPS ===
+    
     private void Update()
     {
         if (isPaused)
         {
-            // Esperando durante la pausa
-            pauseTimer -= Time.deltaTime;
-            if (pauseTimer <= 0)
-            {
-                // Al terminar la pausa, ahora sí voltea y camina
-                direction *= -1;
-                transform.localScale = new Vector3(direction, 1, 1);
-                isPaused = false;
-                directionTimer = changeDirectionTime;
-            }
+            UpdatePauseState();
         }
         else
         {
-            // Contando para cambiar de dirección
-            directionTimer -= Time.deltaTime;
-            if (directionTimer <= 0)
-            {
-                StartPause();
-            }
+            UpdateWalkState();
         }
     }
 
     private void FixedUpdate()
     {
-        if (!isPaused)
+        ApplyMovement();
+    }
+    
+    #endregion
+
+    #region === ESTADOS DE PATRULLA ===
+    
+    private void UpdateWalkState()
+    {
+        walkTimer -= Time.deltaTime;
+        
+        if (walkTimer <= 0)
         {
-            rb2D.velocity = new Vector2(speed * direction, rb2D.velocity.y);
+            StartPause();
         }
-        else
+    }
+
+    private void UpdatePauseState()
+    {
+        pauseTimer -= Time.deltaTime;
+        
+        if (pauseTimer <= 0)
         {
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+            EndPauseAndTurn();
         }
     }
 
     private void StartPause()
     {
-        // Solo inicia la pausa, NO cambia dirección todavía
         isPaused = true;
         pauseTimer = pauseTime;
     }
+
+    private void EndPauseAndTurn()
+    {
+        // Cambiar dirección
+        direction *= -1;
+        FlipSprite();
+        
+        // Reiniciar caminata
+        isPaused = false;
+        walkTimer = walkTime;
+    }
+    
+    #endregion
+
+    #region === MOVIMIENTO ===
+    
+    private void ApplyMovement()
+    {
+        float velocityX = isPaused ? 0 : speed * direction;
+        rb2D.velocity = new Vector2(velocityX, rb2D.velocity.y);
+    }
+
+    private void FlipSprite()
+    {
+        transform.localScale = new Vector3(direction, 1, 1);
+    }
+    
+    #endregion
 }
