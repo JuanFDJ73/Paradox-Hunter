@@ -3,8 +3,9 @@ using UnityEngine.InputSystem;
 
 public class TimeTraveler : MonoBehaviour
 {
-    public bool isInFuture = false;
+    public static bool isInFuture = false;
 
+    // Método llamado por el New Input System (L o Button East)
     public void OnTime(InputValue value)
     {
         if (value.isPressed)
@@ -22,10 +23,7 @@ public class TimeTraveler : MonoBehaviour
 
         foreach (var obj in objs)
         {
-            if (isInFuture)
-                obj.ShowFuture();
-            else
-                obj.ShowPast();
+            obj.UpdateVisual(isInFuture);
         }
     }
 }
