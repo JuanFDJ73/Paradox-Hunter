@@ -387,10 +387,18 @@ public class PlayerController : MonoBehaviour
 
     private void HandleEnemyContact(GameObject obj, Vector2 position)
     {
-        if (obj.CompareTag("Enemy") && !isImmune)
+        if (!obj.CompareTag("Enemy") || isImmune) return;
+
+        int damageAmount = 1; // Valor por defecto
+        
+        // Obtener el daño del enemigo
+        EnemyController enemy = obj.GetComponent<EnemyController>();
+        if (enemy != null)
         {
-            TakeDamage(position);
+            damageAmount = enemy.Damage;
         }
+
+        TakeDamage(position, damageAmount);
     }
     
     #endregion

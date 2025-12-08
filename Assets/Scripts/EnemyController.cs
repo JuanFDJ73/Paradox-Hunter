@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     #region === VARIABLES PÚBLICAS (Inspector) ===
     
     [Header("Referencias")]
     [SerializeField] private Rigidbody2D rb2D;
+
+    [Header("Estadísticas")]
+    [SerializeField] private int damage = 2;
 
     [Header("Movimiento")]
     [SerializeField] private float speed = 3f;
@@ -22,6 +25,12 @@ public class EnemyMovement : MonoBehaviour
     private float pauseTimer;
     private int direction = 1;  // 1 = derecha, -1 = izquierda
     private bool isPaused;
+    
+    #endregion
+
+    #region === PROPIEDADES PÚBLICAS ===
+    
+    public int Damage => damage;
     
     #endregion
 

@@ -777,6 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 383712460}
+  damage: 2
   speed: 4
   walkTime: 2
   pauseTime: 1
