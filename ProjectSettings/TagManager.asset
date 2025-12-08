@@ -52,6 +52,9 @@ TagManager:
   - name: Healing
     uniqueID: 4050251115
     locked: 0
+  - name: Items
+    uniqueID: 4179989775
+    locked: 0
   - name: Enemy
     uniqueID: 555481421
     locked: 0
