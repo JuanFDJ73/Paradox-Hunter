@@ -441,7 +441,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 41929865}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 38c0a7a5a14ec234e9d22b7db63b0c82, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   speed: 7
   jumpForce: 11
   airJumpForce: 7
-  coyoteTime: 0.25
+  coyoteTime: 0.2
   groundCheck: {fileID: 1620915997}
   groundCheckRadius: 0.15
   groundLayer:
@@ -1518,7 +1518,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.05
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2724,7 +2724,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 6.05
+    OrthographicSize: 11
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

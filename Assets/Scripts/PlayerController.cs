@@ -210,6 +210,13 @@ public class PlayerController : MonoBehaviour
         if (coyoteTimeCounter > 0)
         {
             coyoteTimeCounter -= Time.deltaTime;
+            
+            // Si se acabó el coyote time sin saltar, pierde el salto de tierra
+            if (coyoteTimeCounter <= 0 && !hasUsedGroundJump && !isGrounded)
+            {
+                hasUsedGroundJump = true;  // Ya no puede usar salto de tierra
+                jumpsRemaining = 1;         // Solo le queda el salto de aire
+            }
         }
     }
 
