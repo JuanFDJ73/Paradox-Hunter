@@ -46,14 +46,14 @@ TagManager:
   - name: Fondo
     uniqueID: 487154627
     locked: 0
-  - name: Suelo
-    uniqueID: 3456001133
+  - name: Items
+    uniqueID: 4179989775
     locked: 0
   - name: Healing
     uniqueID: 4050251115
     locked: 0
-  - name: Items
-    uniqueID: 4179989775
+  - name: Suelo
+    uniqueID: 3456001133
     locked: 0
   - name: Enemy
     uniqueID: 555481421
