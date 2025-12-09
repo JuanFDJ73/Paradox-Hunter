@@ -15,7 +15,8 @@ public class TimeObject : MonoBehaviour
         pastPosition = pastVersion.transform.position;
         futurePosition = pastPosition;
 
-        UpdateVisual(false); // Mostrar pasado por defecto
+        // Mostrar según el estado ACTUAL del tiempo (no siempre pasado)
+        UpdateVisual(TimeTraveler.isInFuture);
     }
 
     void Update()
