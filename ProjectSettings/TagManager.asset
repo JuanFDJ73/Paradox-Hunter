@@ -46,6 +46,9 @@ TagManager:
   - name: Fondo
     uniqueID: 487154627
     locked: 0
+  - name: Structure
+    uniqueID: 261839117
+    locked: 0
   - name: Items
     uniqueID: 4179989775
     locked: 0
