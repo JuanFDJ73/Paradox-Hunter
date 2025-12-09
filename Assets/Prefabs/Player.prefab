@@ -386,9 +386,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6967418713729761939}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Pies
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 1280147135438239416}
   - component: {fileID: 1026510425988576101}
   - component: {fileID: 4430761047291787987}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TimeRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

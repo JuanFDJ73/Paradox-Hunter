@@ -34,6 +34,9 @@ public class Healing : MonoBehaviour
         if (soundController != null)
             soundController.PlayHealthPickupSound();
 
+        // Notificar al TimeObject (si existe) para lógica temporal
+        TimeObject.NotifyCollected(gameObject);
+
         // Destruir el item
         Destroy(gameObject);
     }
