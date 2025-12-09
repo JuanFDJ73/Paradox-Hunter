@@ -6,11 +6,14 @@ public class TimeTraveler : MonoBehaviour
 {
     public static bool isInFuture = false;
     public static bool canUseTimePower = true;  // Permite bloquear el poder en ciertas zonas
-    
+
     private bool canTravel = true;
 
     [Header("Efecto Visual")]
     public TimeRingEffect ringEffect;
+
+    [Header("Sonido")]
+    public PlayerSoundController soundController;
 
     // Resetear variables static cuando se inicia el juego (Editor o Build)
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -42,6 +45,10 @@ public class TimeTraveler : MonoBehaviour
 
         if (ringEffect != null)
         {
+            // Sonido de viaje en el tiempo
+            if (soundController != null)
+                soundController.PlayTimeTravelSound();
+
             // Reproducir animación del círculo
             yield return StartCoroutine(ringEffect.Play(() =>
             {
@@ -63,7 +70,7 @@ public class TimeTraveler : MonoBehaviour
         isInFuture = !isInFuture;
         UpdateAllTimeObjects();
     }
-    
+
     void UpdateAllTimeObjects()
     {
         // Buscar todos los objetos temporales
@@ -74,13 +81,13 @@ public class TimeTraveler : MonoBehaviour
             obj.UpdateVisual(isInFuture);
         }
     }
-    
+
     // Métodos estáticos para bloquear/desbloquear el poder
     public static void EnableTimePower()
     {
         canUseTimePower = true;
     }
-    
+
     public static void DisableTimePower()
     {
         canUseTimePower = false;

@@ -64,6 +64,14 @@ public class Door : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
+            // Sonido de puerta
+            PlayerSoundController soundController = FindObjectOfType<PlayerSoundController>();
+            if (soundController != null)
+            {
+                Debug.Log("[Door] Playing door open sound");
+                soundController.PlayDoorOpenSound();
+            }
+            
             // Guardar el estado del tiempo antes de cambiar de escena
             TimeManager.SaveTimeState();
             SceneManager.LoadScene(sceneName);

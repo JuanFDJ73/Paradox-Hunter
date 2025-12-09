@@ -29,6 +29,11 @@ public class Healing : MonoBehaviour
             player.Heal(healAmount);  // Cura cantidad fija
         }
 
+        // Sonido de curación
+        PlayerSoundController soundController = other.GetComponent<PlayerSoundController>();
+        if (soundController != null)
+            soundController.PlayHealthPickupSound();
+
         // Destruir el item
         Destroy(gameObject);
     }
