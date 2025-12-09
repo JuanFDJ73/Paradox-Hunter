@@ -4,8 +4,19 @@ using System.Collections;
 public class TimeRingEffect : MonoBehaviour
 {
     public SpriteRenderer ring;
-    public float expandSpeed = 10f;
-    public float fadeSpeed = 5f;
+    
+    [Header("Duración")]
+    public float fadeInDuration = 0.1f;   // Tiempo para aparecer
+    public float spinDuration = 0.6f;     // Tiempo de giro inicial
+    public float expandDuration = 0.4f;   // Tiempo de expansión
+    public float fadeOutDuration = 0.1f;  // Tiempo para desaparecer
+
+    [Header("Escala")]
+    public float spinScale = 2f;          // Tamaño durante el giro
+    public float maxScale = 20f;          // Tamaño máximo
+
+    [Header("Giro")]
+    public float spinSpeed = 320f;        // Grados por segundo
 
     private Vector3 startScale;
 
@@ -19,34 +30,70 @@ public class TimeRingEffect : MonoBehaviour
 
     public IEnumerator Play(System.Action onMidEffect)
     {
-        // 1. Activamos alpha (fade in)
-        float alpha = 0;
-        while (alpha < 1)
+        // Resetear rotación
+        transform.rotation = Quaternion.identity;
+        
+        // 1. Fade In (aparecer rápido)
+        float elapsed = 0f;
+        while (elapsed < fadeInDuration)
         {
-            alpha += Time.deltaTime * fadeSpeed;
-            ring.color = new Color(1, 1, 1, alpha);
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeInDuration;
+            ring.color = new Color(1, 1, 1, t);
+            
+            // Crecer hasta spinScale durante el fade in
+            float scale = Mathf.Lerp(startScale.x, spinScale, t);
+            transform.localScale = new Vector3(scale, scale, 1f);
+            
+            yield return null;
+        }
+        ring.color = new Color(1, 1, 1, 1);
+        transform.localScale = new Vector3(spinScale, spinScale, 1f);
+
+        // 2. Girar en spinScale durante spinDuration
+        elapsed = 0f;
+        while (elapsed < spinDuration)
+        {
+            elapsed += Time.deltaTime;
+            transform.Rotate(0f, 0f, spinSpeed * Time.deltaTime);
             yield return null;
         }
 
-        // 2. Crecemos el círculo
-        while (transform.localScale.x < 20f)
+        // 3. Expandir el círculo (con giro continuo)
+        elapsed = 0f;
+        while (elapsed < expandDuration)
         {
-            transform.localScale += Vector3.one * expandSpeed * Time.deltaTime;
+            elapsed += Time.deltaTime;
+            float t = elapsed / expandDuration;
+            float scale = Mathf.Lerp(spinScale, maxScale, t);
+            transform.localScale = new Vector3(scale, scale, 1f);
+            
+            // Seguir girando mientras expande
+            transform.Rotate(0f, 0f, spinSpeed * Time.deltaTime);
+            
             yield return null;
         }
 
-        // 3. Aquí hacemos el cambio de tiempo
+        // 4. Cambio de tiempo
         onMidEffect?.Invoke();
 
-        // 4. Desvanecemos el círculo
-        while (alpha > 0)
+        // 5. Fade Out (desaparecer rápido)
+        elapsed = 0f;
+        while (elapsed < fadeOutDuration)
         {
-            alpha -= Time.deltaTime * fadeSpeed;
-            ring.color = new Color(1, 1, 1, alpha);
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeOutDuration;
+            ring.color = new Color(1, 1, 1, 1f - t);
+            
+            // Seguir girando
+            transform.Rotate(0f, 0f, spinSpeed * Time.deltaTime);
+            
             yield return null;
         }
 
-        // 5. Reseteamos para la próxima vez
+        // 6. Resetear
         transform.localScale = startScale;
+        transform.rotation = Quaternion.identity;
+        ring.color = new Color(1, 1, 1, 0);
     }
 }

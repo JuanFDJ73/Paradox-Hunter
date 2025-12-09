@@ -2201,8 +2201,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ring: {fileID: 823306632}
-  expandSpeed: 10
-  fadeSpeed: 6
+  fadeInDuration: 0.1
+  spinDuration: 0.6
+  expandDuration: 0.4
+  fadeOutDuration: 0.1
+  spinScale: 1.3
+  maxScale: 20
+  spinSpeed: 100
 --- !u!212 &823306632
 SpriteRenderer:
   m_ObjectHideFlags: 0
