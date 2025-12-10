@@ -80,6 +80,13 @@ public class TimeTraveler : MonoBehaviour
         {
             obj.UpdateVisual(isInFuture);
         }
+        
+        // Actualizar todas las semillas plantadas
+        Seed[] seeds = FindObjectsOfType<Seed>(true);  // true = incluir inactivos
+        foreach (var seed in seeds)
+        {
+            seed.OnTimeChanged();
+        }
     }
 
     // Métodos estáticos para bloquear/desbloquear el poder
