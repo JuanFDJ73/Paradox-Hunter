@@ -245,7 +245,7 @@ Transform:
   m_GameObject: {fileID: 98468023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 199.64725, y: 171.28813, z: -1.934024}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 1334939407}
-  m_Damping: 0.5
-  m_MaxWindowSize: -1
+  m_Damping: 0.52
+  m_MaxWindowSize: 0
   m_Padding: 0
 --- !u!114 &330951324
 MonoBehaviour:
@@ -977,7 +977,7 @@ Transform:
   m_GameObject: {fileID: 905969759}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.093686, y: 4.231453, z: -10.072255}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11543,6 +11543,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de5594a673ec9e458c5a7853e9288ed, type: 3}
+--- !u!1 &1154978932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154978934}
+  - component: {fileID: 1154978933}
+  m_Layer: 0
+  m_Name: GameDataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1154978933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154978932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3bbf7a0e3520b4a8977a58fed107f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1154978934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154978932}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172004735
 GameObject:
   m_ObjectHideFlags: 0
@@ -11781,6 +11825,7 @@ GameObject:
   - component: {fileID: 1196154072}
   - component: {fileID: 1196154075}
   - component: {fileID: 1196154074}
+  - component: {fileID: 1196154076}
   m_Layer: 8
   m_Name: Key
   m_TagString: Untagged
@@ -11849,7 +11894,7 @@ Transform:
   m_GameObject: {fileID: 1196154071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59, y: 11, z: 0}
+  m_LocalPosition: {x: 58.56, y: 12.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11914,6 +11959,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyID: 1
   keyName: Llave
+--- !u!114 &1196154076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196154071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee291a24ac01aed46920dc26c899105c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueID: Key1
+  objectType: 0
+  autoGenerateID: 0
 --- !u!1 &1267874507
 GameObject:
   m_ObjectHideFlags: 0
@@ -12232,6 +12292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredKeyID: 1
+  doorID: 
   timeRequirement: 1
   sceneName: Castle
   spawnPointID: Start
@@ -12742,3 +12803,4 @@ SceneRoots:
   - {fileID: 1620411083}
   - {fileID: 408572465}
   - {fileID: 98468024}
+  - {fileID: 1154978934}
