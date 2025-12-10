@@ -12,6 +12,10 @@ public class Door : MonoBehaviour
     [Header("Configuración de Escena")]
     [SerializeField] private string sceneName;  // Nombre de la escena (asignado por el Editor)
     
+    [Header("Spawn Point")]
+    [Tooltip("ID del SpawnPoint donde aparecerá el jugador en la escena destino")]
+    [SerializeField] private string spawnPointID;
+    
     [Header("Configuración de Tiempo")]
     [SerializeField] private DoorTime doorTime = DoorTime.Past;  // En qué tiempo funciona esta puerta
     
@@ -70,6 +74,12 @@ public class Door : MonoBehaviour
             {
                 Debug.Log("[Door] Playing door open sound");
                 soundController.PlayDoorOpenSound();
+            }
+            
+            // Establecer el spawn point de destino
+            if (!string.IsNullOrEmpty(spawnPointID))
+            {
+                SpawnManager.SetTargetSpawn(spawnPointID);
             }
             
             // Guardar el estado del tiempo antes de cambiar de escena

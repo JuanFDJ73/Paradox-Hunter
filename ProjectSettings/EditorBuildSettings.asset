@@ -15,6 +15,27 @@ EditorBuildSettings:
     path: Assets/Scenes/FutureLevel.unity
     guid: 8614fcce03cbf8c4ba46ea2fc8023637
   - enabled: 1
-    path: Assets/Scenes/BossFight.unity
+    path: Assets/Scenes/BossFightFuture.unity
     guid: 29d4bbc59bc18e94aa4aabeeb0b6a132
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 02daf7dd4f27fe8478b307d62520f937
+  - enabled: 1
+    path: Assets/Scenes/Habitaciones/1.unity
+    guid: 76d0533b9272cd143ae06468531780e5
+  - enabled: 1
+    path: Assets/Scenes/Habitaciones/2.unity
+    guid: 1da351757959d8e418ed5f7b92ba4e7d
+  - enabled: 1
+    path: Assets/Scenes/Habitaciones/3.unity
+    guid: 23d46976b3bccea47a0a1fe5f1dc841d
+  - enabled: 1
+    path: Assets/Scenes/Habitaciones/4.unity
+    guid: 7397e9642490ae145a2dea6f070bd3c1
+  - enabled: 1
+    path: Assets/Scenes/Habitaciones/5.unity
+    guid: 359a4ba6377a4bf4cb584edba81ccf55
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 402e027a1c0602c458886e920c63ad21
   m_configObjects: {}

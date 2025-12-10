@@ -6,6 +6,7 @@ public class DoorKeyRequiredEditor : Editor
 {
     private SerializedProperty requiredKeyIDProp;
     private SerializedProperty timeRequirementProp;
+    private SerializedProperty spawnPointIDProp;
     private SerializedProperty isUnlockedProp;
     private SerializedProperty lockedVisualProp;
     private SerializedProperty unlockedVisualProp;
@@ -14,6 +15,7 @@ public class DoorKeyRequiredEditor : Editor
     {
         requiredKeyIDProp = serializedObject.FindProperty("requiredKeyID");
         timeRequirementProp = serializedObject.FindProperty("timeRequirement");
+        spawnPointIDProp = serializedObject.FindProperty("spawnPointID");
         isUnlockedProp = serializedObject.FindProperty("isUnlocked");
         lockedVisualProp = serializedObject.FindProperty("lockedVisual");
         unlockedVisualProp = serializedObject.FindProperty("unlockedVisual");
@@ -74,6 +76,17 @@ public class DoorKeyRequiredEditor : Editor
         if (string.IsNullOrEmpty(door.SceneName))
         {
             EditorGUILayout.HelpBox("¡Arrastra una escena al campo de arriba!", MessageType.Warning);
+        }
+        
+        EditorGUILayout.Space(10);
+
+        // === Spawn Point ===
+        EditorGUILayout.LabelField("Spawn Point", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(spawnPointIDProp, new GUIContent("Spawn Point ID", "ID del SpawnPoint en la escena destino donde aparecerá el jugador"));
+        
+        if (string.IsNullOrEmpty(spawnPointIDProp.stringValue))
+        {
+            EditorGUILayout.HelpBox("Escribe el ID del SpawnPoint de la escena destino (ej: 'Start', '3', 'Castle')", MessageType.Info);
         }
         
         EditorGUILayout.Space(10);

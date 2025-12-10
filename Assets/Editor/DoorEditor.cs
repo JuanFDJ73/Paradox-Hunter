@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEditor;
 
+// Editor personalizado para Door
 [CustomEditor(typeof(Door))]
 public class DoorEditor : Editor
 {
     private SerializedProperty inputThresholdProp;
     private SerializedProperty doorTimeProp;
+    private SerializedProperty spawnPointIDProp;
 
     private void OnEnable()
     {
         inputThresholdProp = serializedObject.FindProperty("inputThreshold");
         doorTimeProp = serializedObject.FindProperty("doorTime");
+        spawnPointIDProp = serializedObject.FindProperty("spawnPointID");
     }
 
     public override void OnInspectorGUI()
@@ -85,6 +88,15 @@ public class DoorEditor : Editor
             {
                 EditorGUILayout.HelpBox("✓ Escena configurada correctamente", MessageType.Info);
             }
+        }
+
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Spawn Point", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(spawnPointIDProp, new GUIContent("Spawn Point ID", "ID del SpawnPoint en la escena destino donde aparecerá el jugador"));
+        
+        if (string.IsNullOrEmpty(spawnPointIDProp.stringValue))
+        {
+            EditorGUILayout.HelpBox("Escribe el ID del SpawnPoint de la escena destino (ej: 'Start', '3', 'Castle')", MessageType.Info);
         }
 
         EditorGUILayout.Space();

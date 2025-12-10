@@ -21,6 +21,10 @@ public class DoorKeyRequired : MonoBehaviour
     [Header("Destino")]
     [SerializeField] private string sceneName;
     
+    [Header("Spawn Point")]
+    [Tooltip("ID del SpawnPoint donde aparecerá el jugador en la escena destino")]
+    [SerializeField] private string spawnPointID;
+    
     #if UNITY_EDITOR
     // Este campo solo existe en el Editor para drag & drop
     [HideInInspector] public UnityEditor.SceneAsset sceneAsset;
@@ -115,6 +119,12 @@ public class DoorKeyRequired : MonoBehaviour
                 soundController.PlayDoorOpenSound();
             }
 
+            // Establecer el spawn point de destino
+            if (!string.IsNullOrEmpty(spawnPointID))
+            {
+                SpawnManager.SetTargetSpawn(spawnPointID);
+            }
+            
             // Guardar estado del tiempo
             TimeManager.SaveTimeState();
             SceneManager.LoadScene(sceneName);
