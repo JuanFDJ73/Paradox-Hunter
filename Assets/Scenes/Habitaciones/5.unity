@@ -837,24 +837,32 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 275267860812667211, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
       propertyPath: sceneName
-      value: SampleScene
+      value: Castle
       objectReference: {fileID: 0}
     - target: {fileID: 275267860812667211, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
       propertyPath: sceneAsset
       value: 
       objectReference: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+    - target: {fileID: 275267860812667211, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
+      propertyPath: spawnPointID
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1305040335259809966, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
       propertyPath: m_Name
       value: Door(TO)
       objectReference: {fileID: 0}
     - target: {fileID: 4325580095577641971, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
       propertyPath: sceneName
-      value: SampleScene
+      value: Castle
       objectReference: {fileID: 0}
     - target: {fileID: 4325580095577641971, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
       propertyPath: sceneAsset
       value: 
       objectReference: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+    - target: {fileID: 4325580095577641971, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
+      propertyPath: spawnPointID
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5232591344538505168, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

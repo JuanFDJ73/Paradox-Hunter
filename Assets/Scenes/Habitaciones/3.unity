@@ -1047,6 +1047,10 @@ PrefabInstance:
       propertyPath: sceneAsset
       value: 
       objectReference: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+    - target: {fileID: 275267860812667211, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
+      propertyPath: spawnPointID
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1266152962235098180, guid: dbc22c395432e4f41ade6021d4e092d0, type: 3}
       propertyPath: m_IsActive
       value: 0
