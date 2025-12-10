@@ -74,6 +74,13 @@ public class Seed : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         
+        // En el futuro, la semilla está dañada
+        if (TimeTraveler.isInFuture && !isPlanted)
+        {
+            MessageUI.Show("La semilla se dañó con el tiempo...");
+            return;
+        }
+        
         // Solo se puede recoger si estamos en el pasado (es semilla)
         if (!TimeTraveler.isInFuture && CanBeCollected())
         {

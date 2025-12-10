@@ -43,6 +43,14 @@ public class SeedInventory : MonoBehaviour
     // Método alternativo para plantar (llamar desde código)
     public void TryPlantSeed()
     {
+        // No se puede plantar en el futuro
+        if (TimeTraveler.isInFuture)
+        {
+            MessageUI.Show("No tendrá tiempo para crecer...");
+            Debug.Log("[SeedInventory] No puedes plantar en el futuro!");
+            return;
+        }
+        
         if (!HasSeed)
         {
             Debug.Log("[SeedInventory] No tienes semillas!");
@@ -55,12 +63,14 @@ public class SeedInventory : MonoBehaviour
         if (pot == null)
         {
             Debug.Log("[SeedInventory] No hay maceta cerca!");
+            MessageUI.Show("No hay maceta cerca");
             return;
         }
 
         if (!pot.IsEmpty)
         {
             Debug.Log("[SeedInventory] La maceta ya tiene una planta!");
+            MessageUI.Show("La maceta ya tiene una planta");
             return;
         }
 
@@ -99,6 +109,13 @@ public class SeedInventory : MonoBehaviour
         {
             Debug.Log("[SeedInventory] Inventario lleno!");
             MessageUI.Show("¡Inventario de semillas lleno!");
+            return;
+        }
+
+        // Si estamos en el futuro, no se puede recoger
+        if (TimeTraveler.isInFuture)
+        {
+            MessageUI.Show("¡La semilla se dañó en el futuro!");
             return;
         }
 
