@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Enemies
   - Items
-  - 
-  - 
+  - Climb
+  - Ignore
   - 
   - 
   - 
@@ -55,14 +55,14 @@ TagManager:
   - name: Healing
     uniqueID: 4050251115
     locked: 0
-  - name: Suelo
-    uniqueID: 3456001133
-    locked: 0
   - name: Enemy
     uniqueID: 555481421
     locked: 0
   - name: Player
     uniqueID: 2967668803
+    locked: 0
+  - name: Suelo
+    uniqueID: 3456001133
     locked: 0
   - name: Detalles
     uniqueID: 1988118583

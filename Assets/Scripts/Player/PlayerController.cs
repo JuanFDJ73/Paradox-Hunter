@@ -4,10 +4,14 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public PlayerSoundController playerSoundController;
+
     #region ==================== VARIABLES DE CONFIGURACIÓN ====================
     
     [Header("=== MOVIMIENTO ===")]
     [SerializeField] private float speed = 5f;
+    [SerializeField] private float footstepInterval = 0.45f; // Intervalo entre pasos
 
     [Header("=== SALTO ===")]
     [SerializeField] private float jumpForce = 10f;
@@ -64,6 +68,9 @@ public class PlayerController : MonoBehaviour
     private float immunityTimer;
     private int originalLayer;
     private int immuneLayer;
+    
+    // Sonido de pasos
+    private float footstepTimer = 0f;
     
     #endregion
 
@@ -161,6 +168,21 @@ public class PlayerController : MonoBehaviour
 
         // Animación de correr
         animator.SetBool("isRunning", moveX != 0);
+        
+        // Sonido de pasos (solo si está en el suelo y moviéndose)
+        if (moveX != 0 && isGrounded)
+        {
+            footstepTimer -= Time.fixedDeltaTime;
+            if (footstepTimer <= 0f && playerSoundController != null)
+            {
+                playerSoundController.PlayFootstepSound();
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f;  // Resetear cuando no camina
+        }
 
         // Voltear sprite
         if (moveX != 0)
@@ -242,12 +264,20 @@ public class PlayerController : MonoBehaviour
         jumpsRemaining = 1;
         coyoteTimeCounter = 0f;
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        
+        // Sonido de salto
+        if (playerSoundController != null)
+            playerSoundController.PlayJumpSound();
     }
 
     private void PerformAirJump()
     {
         jumpsRemaining--;
         rb.velocity = new Vector2(rb.velocity.x, airJumpForce);
+        
+        // Sonido de salto
+        if (playerSoundController != null)
+            playerSoundController.PlayJumpSound();
     }
     
     #endregion
@@ -284,6 +314,11 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         Debug.Log("¡El jugador ha muerto!");
+        
+        // Sonido de muerte
+        if (playerSoundController != null)
+            playerSoundController.PlayDeathSound();
+        
         onDeath?.Invoke();
         // Agregar: reiniciar nivel, mostrar pantalla de game over, etc.
     }
@@ -311,6 +346,10 @@ public class PlayerController : MonoBehaviour
         isHurt = true;
         hurtTimer = hurtDuration;
         animator.SetBool("isHurt", true);
+        
+        // Sonido de daño
+        if (playerSoundController != null)
+            playerSoundController.PlayHurtSound();
     }
 
     private void ActivateImmunity()
