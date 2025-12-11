@@ -1,0 +1,867 @@
+fileFormatVersion: 2
+guid: bdf2a761ba1badf42b1088de77b38422
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 641
+        width: 94
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f491b0f9742fdef4bbbc63a05a2fb4f2
+      internalID: 826557222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 641
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a7dc2b7f9bece45b0360bff9905f62
+      internalID: 594481015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 642
+        width: 95
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7e2dc30227f26419356602a0d7b60a
+      internalID: -796516088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 642
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d28763d96443054ebdd7cd43ce4a30e
+      internalID: 2050970587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 642
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f3d6263936b9748a185d367dd990e1
+      internalID: 356040972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 642
+        width: 97
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9dfbc07b312e64e909d0d068babcf7
+      internalID: -2053157543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 642
+        width: 95
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dad01501b352a42aaf3ac83f8f169d
+      internalID: -1677225386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 536
+        width: 94
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76a5b7104d3ac341b23d8fcd5b95f0d
+      internalID: 700191202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 535
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665e26ee0b914794eab31b1798be9939
+      internalID: 1575917313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 535
+        width: 95
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69903391688dd354085705b95c73631b
+      internalID: 54403997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 535
+        width: 95
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a15590f441ec1647865120c7dfeb667
+      internalID: -1216735690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 535
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4b69c748f10ab4e9e703bec74b35e5
+      internalID: 2014348506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 536
+        width: 95
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5ebec62fafcf449a76c5872bee3939
+      internalID: -760514532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 426
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3044f53691613984ca21647dac2d9ee7
+      internalID: -170117304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 426
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7515a07e92d6d04468cceb9fb38ea0d2
+      internalID: 694176919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 426
+        width: 95
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71306994b6243834abfc062af0f2b806
+      internalID: 1867328573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 428
+        width: 94
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba577a276aabb448bab25974f582d2e
+      internalID: -355737894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 428
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93e8b8e6c6de6a4e82a01c4cd05a517
+      internalID: -830235350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 427
+        width: 96
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61556392db2483149af932dab8f94ea5
+      internalID: 471910173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 427
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6880687e0aa36f48a9fad6a2fdcbd14
+      internalID: 769888776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 211
+        width: 91
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30f0736b3c78e744a80c0e423581d0f
+      internalID: 60939060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 212
+        width: 102
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c944382464a64d4488f3f523878dda8
+      internalID: -151356627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 212
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832032512870beb4ca555f6483641c00
+      internalID: -190971618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 211
+        width: 107
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9ad8c6919ca134c85c775730980ee9
+      internalID: 1298737479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_48
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 211
+        width: 90
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70823f105a1777e4caac059e8cb3c986
+      internalID: 757564042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_54
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 9
+        width: 107
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373639fd480ee9e42991f6d2ff61d230
+      internalID: 1437025822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_60
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 111
+        width: 90
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408733da0c746f246b539764882a6106
+      internalID: -630086366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_66
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 8
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7822bde85381cc442b6eb96e374b3f25
+      internalID: 1950017191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_72
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 14
+        width: 89
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac95fab6ab984f45b10bb716eddd910
+      internalID: 691009625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 113
+        width: 94
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cb939a53afbba4d9fa2dcafd967aef
+      internalID: -229791924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura1-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 176
+        width: 95
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43876190e720a4e4fb0554e774eae888
+      internalID: -1163934045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Estructura1-Photoroom_0: -229791924
+      Estructura1-Photoroom_1: 826557222
+      Estructura1-Photoroom_10: 700191202
+      Estructura1-Photoroom_11: 1575917313
+      Estructura1-Photoroom_12: 54403997
+      Estructura1-Photoroom_13: -1216735690
+      Estructura1-Photoroom_14: 2014348506
+      Estructura1-Photoroom_15: -760514532
+      Estructura1-Photoroom_16: 389461513
+      Estructura1-Photoroom_17: -1597238929
+      Estructura1-Photoroom_18: -519111504
+      Estructura1-Photoroom_19: -170117304
+      Estructura1-Photoroom_2: 594481015
+      Estructura1-Photoroom_20: 694176919
+      Estructura1-Photoroom_21: 1867328573
+      Estructura1-Photoroom_22: 455878335
+      Estructura1-Photoroom_23: -355737894
+      Estructura1-Photoroom_24: -830235350
+      Estructura1-Photoroom_25: 471910173
+      Estructura1-Photoroom_26: 769888776
+      Estructura1-Photoroom_27: 54546975
+      Estructura1-Photoroom_28: 60939060
+      Estructura1-Photoroom_29: 1083975977
+      Estructura1-Photoroom_3: -796516088
+      Estructura1-Photoroom_30: 1037154892
+      Estructura1-Photoroom_31: 1275815421
+      Estructura1-Photoroom_32: 234124938
+      Estructura1-Photoroom_33: -2125772454
+      Estructura1-Photoroom_34: -1524229129
+      Estructura1-Photoroom_35: 1136275456
+      Estructura1-Photoroom_36: -1323436525
+      Estructura1-Photoroom_37: 2131637949
+      Estructura1-Photoroom_38: 1627475811
+      Estructura1-Photoroom_39: 1467407778
+      Estructura1-Photoroom_4: 2050970587
+      Estructura1-Photoroom_40: 415989648
+      Estructura1-Photoroom_41: -103445665
+      Estructura1-Photoroom_42: -151356627
+      Estructura1-Photoroom_43: -190971618
+      Estructura1-Photoroom_44: 1298737479
+      Estructura1-Photoroom_45: -1347054960
+      Estructura1-Photoroom_46: -1635504745
+      Estructura1-Photoroom_47: -507522615
+      Estructura1-Photoroom_48: 757564042
+      Estructura1-Photoroom_49: 1368691428
+      Estructura1-Photoroom_5: -1163934045
+      Estructura1-Photoroom_50: 128679859
+      Estructura1-Photoroom_51: -2067551991
+      Estructura1-Photoroom_52: -1233222856
+      Estructura1-Photoroom_53: -1418843148
+      Estructura1-Photoroom_54: 1437025822
+      Estructura1-Photoroom_55: 812843878
+      Estructura1-Photoroom_56: -296190405
+      Estructura1-Photoroom_57: 1594263339
+      Estructura1-Photoroom_58: -379731582
+      Estructura1-Photoroom_59: -1587653829
+      Estructura1-Photoroom_6: 356040972
+      Estructura1-Photoroom_60: -630086366
+      Estructura1-Photoroom_61: -2051894598
+      Estructura1-Photoroom_62: 1020679398
+      Estructura1-Photoroom_63: -1290417161
+      Estructura1-Photoroom_64: 1657514045
+      Estructura1-Photoroom_65: 476263592
+      Estructura1-Photoroom_66: 1950017191
+      Estructura1-Photoroom_67: 579688961
+      Estructura1-Photoroom_68: 935863179
+      Estructura1-Photoroom_69: 1608440896
+      Estructura1-Photoroom_7: -2053157543
+      Estructura1-Photoroom_70: -1094929948
+      Estructura1-Photoroom_71: 1397570982
+      Estructura1-Photoroom_72: 691009625
+      Estructura1-Photoroom_73: 199801677
+      Estructura1-Photoroom_74: -442395500
+      Estructura1-Photoroom_75: 756956316
+      Estructura1-Photoroom_8: -1677225386
+      Estructura1-Photoroom_9: 307873479
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
