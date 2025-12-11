@@ -3,17 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TutorialRequirement
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Enemies
+  - Items
   - 
   - 
   - 
@@ -40,4 +42,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fondo
+    uniqueID: 487154627
+    locked: 0
+  - name: Structure
+    uniqueID: 261839117
+    locked: 0
+  - name: Items
+    uniqueID: 4179989775
+    locked: 0
+  - name: Healing
+    uniqueID: 4050251115
+    locked: 0
+  - name: Suelo
+    uniqueID: 3456001133
+    locked: 0
+  - name: Enemy
+    uniqueID: 555481421
+    locked: 0
+  - name: Player
+    uniqueID: 2967668803
+    locked: 0
+  - name: Detalles
+    uniqueID: 1988118583
     locked: 0
